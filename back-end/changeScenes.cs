@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
  		// Add method for load Scene '1', previously on scene build menu   
     public void PlayGame()
     {
-    	// SceneManager class
+    	// You can use scene index or scene name
     	SceneManager.LoadScene(1);
 
     	// On Button Menu Element
