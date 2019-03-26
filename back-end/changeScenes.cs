@@ -10,5 +10,10 @@ public class MainMenu : MonoBehaviour
     {
     	// SceneManager class
     	SceneManager.LoadScene(1);
+
+    	// On Button Menu Element
+    	// add the current class
+    	// as on click function
+    	// for call PlayGame();
     }
 }
