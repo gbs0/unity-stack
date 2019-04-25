@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class EditText()
 {
+  
   Text myText;
      
-  public void blablabla()  
-  // not that your function must be public if you want to atach the script to your text
-  {
+  void Start() {
+    // Here the variable myText reference to the game Object MainText
     myText=GameObject.Find("MainText").GetComponent<Text>(); 
-    // here the variable myText reference to the game Object MainText
+    
+  }
 
-    myText.text="Hello";    
+  // Note that your function must be public if you want to atach the script to your text
+  public void blablabla()  
+  {
+    myText.text = "Hello";    
 
     // or you can also do this
     string example="Hello2";
@@ -21,8 +25,5 @@ public class EditText()
    // there are also other function for example to change color
 
    myText.color=Color.red // your text color will  be red
-
-
-
   }   
 } 
