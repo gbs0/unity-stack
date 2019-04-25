@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EditText()
-{
+public class EditText() {
   
   Text myText;
      
@@ -18,12 +17,13 @@ public class EditText()
   {
     myText.text = "Hello";    
 
-    // or you can also do this
-    string example="Hello2";
-    myText.text=example // this will show you Hello2
+    // or we can also do this
+    string example = "Hello2";
 
-   // there are also other function for example to change color
+    myText.text = example         // this will show you Hello2
 
-   myText.color=Color.red // your text color will  be red
+    // There are also other function for example to change color
+    myText.color=Color.red // your text color will  be red
+
   }   
 } 
