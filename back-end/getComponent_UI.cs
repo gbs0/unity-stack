@@ -13,7 +13,7 @@ public class EditText() {
   }
 
   // Note that your function must be public if you want to atach the script to your text
-  public void blablabla()  
+  public void AnyMethodName()  
   {
     myText.text = "Hello";    
 
