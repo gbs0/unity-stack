@@ -1,6 +1,5 @@
-// Unity Imports;
-
-
+using UnityEngine;
+using System.Collections;
 
 public class Cube : MonoBehaviour {
 	public float upForce = 1f;
