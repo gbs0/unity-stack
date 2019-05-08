@@ -9,7 +9,7 @@ public class PlayerScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        t = GetComponent<Transform>();                      // Get Transform component on GameObject
+        actualPosition = GetComponent<Transform>();                      // Get Transform component on GameObject
     }
 
     // Update is called once per frame
@@ -32,6 +32,15 @@ public class PlayerScript : MonoBehaviour
             actualPosition.Translate(0, -0.1f, 0);
         }
 
+        if (Input.GetMouseButton (0)) }
+            playerFire();
+        }
+        
+        if (Input.GetMouseButton (0) && //some other condition
+        ) {
+            /// Do something
+        }
+        
         Vector3 newPosition = actualPosition.position;
         // if (actualPosition.x > 2.9f) actualPosition.x = 2.9f;
         // if (actualPosition.x < -2.9f) actualPosition.x = -2.9f;
