@@ -46,6 +46,10 @@ public class PlayerScript : MonoBehaviour
         // if (actualPosition.x < -2.9f) actualPosition.x = -2.9f;
         newPosition.x = Mathf.Clamp(newPosition.x, -2.9f, 2.9f);  //One line statement
         transform.position = newPosition;
+
+        // Or we can move the player using gameObject and Transform properties
+        gameObject.transform.Translate(moveHorizontal, moveVertical, 0);
+        
     }
 
 }
