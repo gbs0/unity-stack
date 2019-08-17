@@ -22,6 +22,7 @@ public class MainGame : MonoBehavior
 	public void PlayCards()
 	{
 		deck = GerarDeck();
+		Embaralhar(deck);
 
 		foreach (string card in deck)
 		{
@@ -42,9 +43,18 @@ public class MainGame : MonoBehavior
 		return deckNovo;
 	}
 
-	void Embaralhar()<T>
+	void Embaralhar<T>(List<T> list)
 	{
-
+		System.Random random = new System.Random();
+		int number = list.Count;
+		while (number > 1)
+		{
+			int index = random.Next(number);
+			number--;
+			T cache = list[index];
+			list[index] = list[number];
+			list[number] = cache;
+		}
 	}
 
 }
