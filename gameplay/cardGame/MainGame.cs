@@ -11,7 +11,7 @@ public class MainGame : MonoBehavior
 
 	void Start()
 	{
-
+		// PlayCards();
 	}
 
 	void Update()
@@ -25,7 +25,7 @@ public class MainGame : MonoBehavior
 
 		foreach (string card in deck)
 		{
-			print(card); // test some cards
+			print(card); // test some cards, but deck isn't shuffle yet
 		}	
 	}
 
@@ -40,6 +40,11 @@ public class MainGame : MonoBehavior
 			}
 		}
 		return deckNovo;
+	}
+
+	void Embaralhar()<T>
+	{
+
 	}
 
 }
