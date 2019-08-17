@@ -9,14 +9,27 @@ public class MainGame : MonoBehavior
 	// Init String Array for card values
 	public static string[] values = new string[] { "A","1","2","3", "4", "5", "6", "7", "8","9","10", "K", "Q", "J" };
 
-	void Start(){
+	void Start()
+	{
 
 	}
 
-	void Update(){
+	void Update()
+	{
 
 	}
 
+	public void PlayCards()
+	{
+		deck = GerarDeck();
+
+		foreach (string card in deck)
+		{
+			print(card); // test some cards
+		}	
+	}
+
+	// Method for init a new Deck with naipe and value
 	public static List<string> GerarDeck()
 	{
 		List<string> deckNovo = new List<string>();
@@ -26,6 +39,7 @@ public class MainGame : MonoBehavior
 				deckNovo.Add(naipe + value);
 			}
 		}
+		return deckNovo;
 	}
 
 }
