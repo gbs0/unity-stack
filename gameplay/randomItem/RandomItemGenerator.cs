@@ -56,8 +56,11 @@ public class RandomItemGenerator : MonoBehavior
 
 	public string GetRandomItem() {
 		int nameIndex = Random.Range(0, itemName.String.Length);
-		int nameIndex = Random.Range(0, itemName.String.Length);
-		int nameIndex = Random.Range(0, itemName.String.Length);
+		int descriptionIndex = Random.Range(0, itemDescription.String.Length);
+		int dimensionIndex = Random.Range(0, itemDimension.String.Length);
+		int powerIndex = Random.Range(0, itemPower.String.Length);
+
+		string item
 	}
 
 
