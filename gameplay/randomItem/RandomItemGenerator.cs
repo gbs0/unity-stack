@@ -11,7 +11,13 @@ public class RandomItemGenerator : MonoBehavior
 	};
 
 	string[] itemDimension = new string[] {
-
+		"On a Cab Planet",
+		"Dimension C-137",
+		"Alphabetrium",
+		"Gazorpazorp",
+		"Purge Planet",
+		"Bird World",
+		"Cronenberg World"
 	};
 
 	public string GetRandomItem() {
