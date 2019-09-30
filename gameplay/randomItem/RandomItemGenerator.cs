@@ -3,7 +3,8 @@ using UnityEngine;
 public class RandomItemGenerator : MonoBehavior
 {
 	string[] itemName = new string[] {
-		
+		"",
+		"",
 
 	};
 
@@ -30,6 +31,27 @@ public class RandomItemGenerator : MonoBehavior
 		"Purge Planet",
 		"Bird World",
 		"Cronenberg World"
+	};
+
+	string[] itemPower = new string[] {
+		"Longevity",
+		"Possession",
+		"Natural Weapons",
+		"Anti-Gravity",
+		"Darkforce Manipulation",
+		"Energy Resistance",
+		"Telekinesis",
+		"Summoning",
+		"Psychokinesis",
+		"Endurance",
+		"Adaptation",
+		"Intelligence",
+		"Molecular Combustion",
+		"Radar Sense",
+		"Danger Sense",
+		"Bullet Time",
+		"Apotheosis",
+		"Photokinesis"
 	};
 
 	public string GetRandomItem() {
