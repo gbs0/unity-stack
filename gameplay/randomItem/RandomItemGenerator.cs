@@ -6,7 +6,7 @@ public class RandomItemGenerator : MonoBehavior
 
 	};
 
-	string[] itemDescription = new string[]{
+	string[] itemDescription = new string[]{	
 
 	};
 
