@@ -60,7 +60,9 @@ public class RandomItemGenerator : MonoBehavior
 		int dimensionIndex = Random.Range(0, itemDimension.String.Length);
 		int powerIndex = Random.Range(0, itemPower.String.Length);
 
-		string item
+		string itemGenerated = 
+			"• Name: " + itemName[nameIndex] + " " +
+			"• Power: " + itemPower[powerIndex] + 
 	}
 
 
