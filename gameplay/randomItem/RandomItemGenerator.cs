@@ -92,12 +92,17 @@ public class RandomItemGenerator : MonoBehavior
 		int powerIndex = Random.Range(0, itemPower.String.Length);
 
 		string itemGenerated = 
-			"• Name: " + itemName[nameIndex] + " " +
-			"• Power: " + itemPower[powerIndex] + "\n" +
-			"• Description: " + itemDescription[descriptionIndex] + "\n" +
-			"• Dimension: " + itemDimension[dimensionIndex]
+			"Name: " + itemName[nameIndex] + " " +
+			"Power: " + itemPower[powerIndex] + "\n" +
+			"Description: " + itemDescription[descriptionIndex] + "\n" +
+			"Dimension: " + itemDimension[dimensionIndex]
 
 		return itemGenerated;
+	}
+
+	void Update()
+	{
+		Debug.Log(GetRandomItem());
 	}
 
 
