@@ -3,9 +3,38 @@ using UnityEngine;
 public class RandomItemGenerator : MonoBehavior
 {
 	string[] itemName = new string[] {
-		"",
-		"",
-
+		"Dark Bushido the Fated",
+		"Red Walrus",
+		"Bloodhawk",
+		"Doctor Nova",
+		"Giant Naruto Uzumaki Ivy",
+		"Red Clea Lord",
+		"Jack of Hearts",
+		"General Mandarin the Hunter",
+		"Captain Monarch",
+		"Ultra Cat",
+		"Green Leader Lord",
+		"Ultra Sylar Machine",
+		"Ultra Proto-Goblin",
+		"Doomsday I",
+		"Ariel Dragon",
+		"Hybrid Eyes",
+		"Cyborg Walrus",
+		"Cy-Gor XI",
+		"Red Archangel",
+		"Bloodaxe Fist",
+		"Illustrious Firestorm Machine",
+		"Mr Copycat XI",
+		"Green Storm",
+		"Agent Speedball",
+		"Giant Silk Girl",
+		"Captain Thing Machine",
+		"Magnificent Shang-Chi Fist",
+		"Captain Feral Boy",
+		"Green Morph",
+		"Supah Bird Lord",
+		"Cat",
+		"Warlock"
 	};
 
 	string[] itemDescription = new string[]{	
@@ -63,7 +92,7 @@ public class RandomItemGenerator : MonoBehavior
 		string itemGenerated = 
 			"• Name: " + itemName[nameIndex] + " " +
 			"• Power: " + itemPower[powerIndex] + "\n" +
-			"• Description: " + itemDescription[descriptionIndex] +  
+			"• Description: " + itemDescription[descriptionIndex] + 
 	}
 
 
