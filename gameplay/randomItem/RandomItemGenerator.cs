@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RandomItemGenerator : MonoBehavior
@@ -92,7 +94,10 @@ public class RandomItemGenerator : MonoBehavior
 		string itemGenerated = 
 			"• Name: " + itemName[nameIndex] + " " +
 			"• Power: " + itemPower[powerIndex] + "\n" +
-			"• Description: " + itemDescription[descriptionIndex] + 
+			"• Description: " + itemDescription[descriptionIndex] + "\n" +
+			"• Dimension: " + itemDimension[dimensionIndex]
+
+		return itemGenerated;
 	}
 
 
