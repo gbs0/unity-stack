@@ -58,6 +58,14 @@ namespace DesignPatterns
             var house = new Product("House", Color.Green, Size.Small);
 
             Product[] products = {apple, true, house};
+
+            var pf = new ProductFilter();
+            WriteLine("Green products:");
+            foreach (var p in pf.FilterByColor(products, Color.Green))
+            {
+                WriteLine($" - {p.Name} is green");
+            }
+
         }
     }
 
