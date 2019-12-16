@@ -29,7 +29,17 @@ namespace DesignPatterns
             Color = color;
             Size = size;
         }
+    }
 
+    public class ProductFilter
+    {
+        public static IEnumerable<Product> FilterBySize(IEnumerable<Product> products,
+        Size size)
+        {
+            foreach (var p in products)
+                if (p.Size == size)
+                    yield return p;
+        }
     }
 
     public class OrderSystem
