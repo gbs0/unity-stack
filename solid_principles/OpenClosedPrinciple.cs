@@ -44,7 +44,7 @@ namespace DesignPatterns
         Color color)
         {
             foreach (var p in products)
-                if (p.Size == size)
+                if (p.Color == color)
                     yield return p;
         }
     }
