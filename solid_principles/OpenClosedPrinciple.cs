@@ -48,7 +48,31 @@ namespace DesignPatterns
                     yield return p;
         }
     }
+    
+    public interface ISpecification<T> 
+    {
+        bool IsSatisfied(T t); 
+    }
 
+    public interface IFilter<T>
+    {
+        IEnumerable<T> Filter(IEnumerable<T> items, ISpecification<T> spec);
+    }
+
+    public class ColorSpecification : ISpecification<Product>
+    {
+        private Color color;
+
+        public ColorSpecification(Color color)
+        {
+            this.color = color;
+        }
+
+        public IsSatisfied(Product t)
+        {
+            return t.Color == color;
+        }
+    }
     public class OrderSystem
     {
         static void Main(string[] args)
