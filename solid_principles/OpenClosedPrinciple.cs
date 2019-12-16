@@ -40,13 +40,24 @@ namespace DesignPatterns
                 if (p.Size == size)
                     yield return p;
         }
+        public IEnumerable<Product> FilterByColor(IEnumerable<Product> products,
+        Color color)
+        {
+            foreach (var p in products)
+                if (p.Size == size)
+                    yield return p;
+        }
     }
 
     public class OrderSystem
     {
         static void Main(string[] args)
         {
+            var apple = new Product("Apple", Color.Green, Size.Small);
+            var tree = new Product("Tree", Color.Green, Size.Small);
+            var house = new Product("House", Color.Green, Size.Small);
 
+            Product[] products = {apple, true, house};
         }
     }
 
