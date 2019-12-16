@@ -22,21 +22,18 @@ namespace DesignPatterns
             entries.RemoveAt(index);
         }
 
-        public override string ToString()
+        public overwrite string ToString()
         {
             return string.Join(Enviroment.NewLine, entries);
         }
-        public void Save(string filename)
-        {
-            filename.WriteAllText(filename, ToString());
-        }   
-        public static Journal Load(string filename)
-        {
+    }
 
-        }
-        public void Load(Uri uri)
+    public class Persistance 
+    {
+        public void SaveToFile(Journal j, string filename, bool overwrite = false)
         {
-
+            if (overwrite || !File.Exists(filename))
+            filename.WriteAllText(filename, j.ToString());
         }
     }
     
@@ -48,6 +45,11 @@ namespace DesignPatterns
             j.AddEntry("This is my first record");
             j.AddEntry("Hello World");
             WriteLine(j);
+
+            var p = new Persistance();
+            var filename = @"c:\temp\journal.txt";
+            p.SaveToFile(j, filename, true);
+            Process.Start(filename);
         }
     }
 }
