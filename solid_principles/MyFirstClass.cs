@@ -24,7 +24,19 @@ namespace DesignPatterns
 
         public override string ToString()
         {
-            return string;
+            return string.Join(Enviroment.NewLine, entries);
+        }
+        public void Save(string filename)
+        {
+            filename.WriteAllText(filename, ToString());
+        }   
+        public static Journal Load(string filename)
+        {
+
+        }
+        public void Load(Uri uri)
+        {
+
         }
     }
     
@@ -32,7 +44,10 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
-
+            var j = new Journal();
+            j.AddEntry("This is my first record");
+            j.AddEntry("Hello World");
+            WriteLine(j);
         }
     }
 }
