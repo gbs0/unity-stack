@@ -136,6 +136,17 @@ namespace DesignPatterns
                 WriteLine($" - {p.Name} is green");
             }
 
+            WriteLine("Large blue items");
+            foreach (var p in bf.Filter(
+            products,
+            new AndSpecification<Product>(
+                new ColorSpecification(Color.Blue),
+                new SizeSpecification(Size.Large)
+            )))
+            {
+                WriteLine($" - {p.Name} is big and blue");
+            }
+
         }
     }
 
