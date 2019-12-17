@@ -36,7 +36,14 @@ namespace DesignPatterns
     {
         public Search(Relationships relationships)
         {
-
+            var relations = relationships.Relations;
+            foreach (var r in relations.Where(
+                x => x.Item1.Name == "John" &&
+                     x.Item2 == Relationship.Parent
+            ))
+            {
+                WriteLine($"John has a child called {r.Item3.Name}");
+            }
         }
 
         static void Main(string[] args)
