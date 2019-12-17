@@ -10,7 +10,7 @@ namespace DesignPatterns
 
         public Rectangle()
         {
-
+            
         }
 
         public Rectangle(int width, int height)
@@ -28,5 +28,8 @@ namespace DesignPatterns
     public class Liskov
     {
         static void Main(string[] args)
+        {
+            var rect = new Rectangle();
+        }
     }
 }
