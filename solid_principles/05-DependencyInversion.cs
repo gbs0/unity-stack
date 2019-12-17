@@ -28,6 +28,8 @@ namespace DesignPatterns
             relations.Add((parent, Relationship.Parent, child));
             relations.Add((child, Relationship.Parent, parent));
         }
+
+        public List<(Person, Relationship, Person)> Relations => relations;
     }
 
     public class Search
@@ -36,7 +38,7 @@ namespace DesignPatterns
         {
 
         }
-        
+
         static void Main(string[] args)
         {
             var parent = new Person() {Name = "John"};
@@ -46,6 +48,8 @@ namespace DesignPatterns
             var relationships = new Relationship();
             relationships.AddParentAndChild(parent, child1);
             relationships.AddParentAndChild(parent, child2);
+
+            new Search(relationships);
         }
     }
 }
