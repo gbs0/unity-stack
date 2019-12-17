@@ -72,6 +72,11 @@ namespace Interface
         }
     }
 
+    public interface IMultiFunctionDevice : IScanner, IPrinter //..
+    {
+        
+    }
+    
 
 
     public class Demo
