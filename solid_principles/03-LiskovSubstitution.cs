@@ -24,12 +24,18 @@ namespace DesignPatterns
             return $"{nameof(Width)}: {Width}, {nameof(Height)}: {Height}";
         }
 
+        public CalculateArea() 
+        {
+
+        }
     }
     public class Liskov
     {
+        static public int Area(Rectangle r) => r.Width * r.Height;
         static void Main(string[] args)
         {
             var rect = new Rectangle();
+
         }
     }
 }
