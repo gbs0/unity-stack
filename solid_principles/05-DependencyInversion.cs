@@ -23,7 +23,7 @@ namespace DesignPatterns
     }
 
     // low-level parts of the system
-    public class Relationships
+    public class Relationships : IRelationshipBrowser
     {
         private List<(Person, Relationship, Person)> relations 
         = new List<(Person, Relationship, Person)>();
@@ -32,6 +32,14 @@ namespace DesignPatterns
         {
             relations.Add((parent, Relationship.Parent, child));
             relations.Add((child, Relationship.Parent, parent));
+        }
+        
+        public IEnumerable<Person> FindAllChildrenOf(string name)
+        {
+            return relations.Where(
+                x => x.Item1.Name == name &&
+                     x.Item2 == Relationship.Parent
+            )).Select(ref => ref.Item3);
         }
 
         // public List<(Person, Relationship, Person)> Relations => relations;
@@ -50,6 +58,12 @@ namespace DesignPatterns
         //         WriteLine($"John has a child called {r.Item3.Name}");
         //     }
         // }
+
+        public Search(IRelationshipBrowser browser)
+        {
+            foreach (var p in browser.FindAllChildrenOf("John"))
+                WriteLine($"John has a child called {p.Name}");
+        }
 
         static void Main(string[] args)
         {
