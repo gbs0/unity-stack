@@ -42,9 +42,12 @@ namespace DesignPatterns
         static public int Area(Rectangle r) => r.Width * r.Height;
         static void Main(string[] args)
         {
-            var rect = new Rectangle();
+            Rectangle rect = new Rectangle(2,3);
             WriteLine($"{rect} has area {Area(rect)}");
 
+            Rectangle square = new Square();
+            square.Width = 4;
+            WriteLine($"{square} has area {Area(square)}");
         }
     }
 }
