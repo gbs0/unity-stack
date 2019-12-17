@@ -21,7 +21,7 @@ namespace DesignPatterns
 
         public override string ToString()
         {
-
+            return $"{nameof(Width)}: {Width}, {nameof(Height)}: {Height}";
         }
 
     }
