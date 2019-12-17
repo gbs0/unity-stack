@@ -73,6 +73,18 @@ namespace DesignPatterns
             return t.Color == color;
         }
     }
+
+    public class SizeSpecification : ISpecification<Product>
+
+    public class BetterFilter : IFilter<Product>
+    {
+        public IEnumerable<Product> Filter(IEnumerable<Product> items, ISpecification<Product> spec);
+        {
+            foreach (var i in items)
+                if(spec.IsSatisfied(i))
+                    yield return i;
+        }
+    }
     public class OrderSystem
     {
         static void Main(string[] args)
@@ -84,8 +96,15 @@ namespace DesignPatterns
             Product[] products = {apple, true, house};
 
             var pf = new ProductFilter();
-            WriteLine("Green products:");
+            WriteLine("Green products: (old)");
             foreach (var p in pf.FilterByColor(products, Color.Green))
+            {
+                WriteLine($" - {p.Name} is green");
+            }
+
+            var bf = new BetterFilter();
+            WriteLine("Green products: (new)");
+            foreach (var p in bf.Filter(products, new ColorSpecification(Color.Green)))
             {
                 WriteLine($" - {p.Name} is green");
             }
