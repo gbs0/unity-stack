@@ -35,6 +35,7 @@ namespace DesignPatterns
         static void Main(string[] args)
         {
             var rect = new Rectangle();
+            WriteLine($"{rect} has area {Area(rect)}")
 
         }
     }
