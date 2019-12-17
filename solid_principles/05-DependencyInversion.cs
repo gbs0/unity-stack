@@ -25,7 +25,27 @@ namespace DesignPatterns
 
         public void AddParentAndChild(Person parent, Person child)
         {
-            
+            relations.Add((parent, Relationship.Parent, child));
+            relations.Add((child, Relationship.Parent, parent));
+        }
+    }
+
+    public class Search
+    {
+        public Search(Relationships relationships)
+        {
+
+        }
+        
+        static void Main(string[] args)
+        {
+            var parent = new Person() {Name = "John"};
+            var child1 = new Person() {Name = "Chris"};
+            var child2 = new Person() {Name = "Mary"};
+
+            var relationships = new Relationship();
+            relationships.AddParentAndChild(parent, child1);
+            relationships.AddParentAndChild(parent, child2);
         }
     }
 }
