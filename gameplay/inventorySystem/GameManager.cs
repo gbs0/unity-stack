@@ -13,3 +13,4 @@ public class GameManager : MonoBehaviour
             Inventory.instance.AddItem(itemList[Random.Range(0, itemList.Count)]);
         }
     }
+}
